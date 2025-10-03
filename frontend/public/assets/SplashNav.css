@@ -1,0 +1,78 @@
+:root{
+    --blue: rgb(57, 139, 225);
+}
+
+body{
+    background: var(--blue);
+    font-family: "Kantumruy";
+}
+
+.SplashNav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; 
+    padding: 0 40px 0 40px; 
+    background: transparent;
+}
+
+.SplashNav::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 20px; 
+    background-color: white;
+    z-index: -1; 
+}
+
+.SplashNav-brand img {
+    height: 50px;
+    width: auto;
+    margin-bottom: 5px; 
+}
+
+.SplashNav-brand {
+    margin-top: 20px;;
+}
+
+.SplashNav-links {
+    display: flex;
+    font-size: 0; 
+    position: relative;
+    top: -19px; 
+}
+
+.nav-link {
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 10px 30px;
+    transition: all 0.3s ease;
+    text-align: center;
+    clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 10% 100%);
+    background-color: #fff;
+    display: inline-block;
+    margin: 0;
+    position: relative;
+    z-index: 2; 
+    border: none;
+    outline: none;
+}
+
+.nav-link + .nav-link {
+    margin-left: -2px; 
+}
+
+.nav-link.login-btn {
+    color: #007bff;
+}
+
+.nav-link.signup-btn {
+    background-color: #007bff;
+    color: #fff;
+}

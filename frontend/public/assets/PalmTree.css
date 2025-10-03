@@ -1,0 +1,16 @@
+.palm-tree {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    text-align: left;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.palm-tree img {
+    width: 80%;
+    height: auto;
+    max-width: 300px;
+    margin-bottom: -5px; /* Makes it touch the footer */
+}

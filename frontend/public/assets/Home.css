@@ -1,0 +1,147 @@
+:root {
+    --base: #3396D3;   
+    --light: #7ec8f5;  
+    --second: #EBCB90;
+    --grey: #EEEEEE;
+    --dark: #04253a;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom right, var(--base), var(--light));
+    min-height: 100vh;
+}
+
+
+.home-page {
+    padding: 30px 40px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.home-page h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+}
+
+.search-input {
+    display: flex;
+    max-width: 500px;
+    margin: 0 auto 40px;
+}
+
+.search-input input {
+    flex: 1;
+    padding: 12px 20px;
+    border: 2px solid #ddd;
+    border-radius: 25px 0 0 25px;
+    font-size: 1em;
+    outline: none;
+}
+
+.search-input button {
+    padding: 12px 20px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 0 25px 25px 0;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.feeds-tabs {
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ddd;
+}
+
+.feed-tab {
+    padding: 15px 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 500;
+    color: #666;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.feed-tab.active {
+    color: #007bff;
+}
+
+.feed-tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: #007bff;
+}
+
+.feed-tab:hover {
+    color: #007bff;
+}
+
+.feeds-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.feed {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.feed:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+
+.feed h2 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+}
+
+.feed-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.home-page h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+
+    background: linear-gradient(90deg, var(--grey), var(--dark));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+
+    background-size: 200% auto;
+    animation: waterFlow 5s linear infinite;
+}
+
+@keyframes waterFlow {
+    0% {
+        background-position: 0% center;
+    }
+    100% {
+        background-position: 200% center;
+    }
+}

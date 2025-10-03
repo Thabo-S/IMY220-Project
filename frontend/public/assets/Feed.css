@@ -1,0 +1,21 @@
+/* 56_Seripe_D1 */
+.activity-icon {
+    font-size: 1.5rem;
+    color: #007bff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+}
+
+.icon.checkin {
+    color: #28a745; 
+}
+
+.icon.update {
+    color: #ffc107; 
+}
+
+.icon.other {
+    color: #6c757d; 
+}
