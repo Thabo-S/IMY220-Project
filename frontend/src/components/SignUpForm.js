@@ -27,14 +27,12 @@ const SignUpForm = ({ onSignUp }) => {
             newErrors.email = "Email is invalid";
         }
 
-        // Password validation
         if (!userData.password) {
             newErrors.password = "Password is required";
         } else if (userData.password.length < 6) {
             newErrors.password = "Password must be at least 6 characters";
         }
 
-        // Confirm password validation
         if (userData.password !== userData.confirmPassword) {
             newErrors.confirmPassword = "Passwords do not match";
         }

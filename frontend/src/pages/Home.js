@@ -40,7 +40,7 @@ const Home = () => {
         if (searchTerm) {
             fetchSearchResults();
         } else {
-            // If no search term, show activity feeds
+            
             fetchActivityFeeds();
         }
     };

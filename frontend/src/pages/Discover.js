@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Filters from "../components/filters";
 import SearchInput from "../components/SearchInput";
+import AddFriendButton from "../components/AddFriendButton";
 
 const Discover = () => {
     const [searchTerm, setSearchTerm] = useState("");
@@ -17,12 +18,26 @@ const Discover = () => {
     const [users, setUsers] = useState([]);
     const [messages, setMessages] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
+    const [currentUserId, setCurrentUserId] = useState(null);
+
+    useEffect(() => {
+        // Get current logged-in user
+        const storedUser = localStorage.getItem('user');
+        if (storedUser) {
+            try {
+                const userData = JSON.parse(storedUser);
+                setCurrentUserId(userData.id);
+            } catch (error) {
+                console.error('Error parsing user data:', error);
+            }
+        }
+    }, []);
 
     const handleSearch = () => {
         if (searchTerm) {
             fetchSearchResults();
         } else {
-            //  no search term, show all public projects
+           
             fetchAllProjects();
         }
     };
@@ -185,9 +200,15 @@ const Discover = () => {
                                                 alt={user.name}
                                                 className="user-avatar"
                                             />
-                                            <span className="user-name">{user.name || 'Unknown'}</span>
-                                            <p className="user-bio">{user.bio || 'No bio available'}</p>
-                                            <span className="user-email">{user.email}</span>
+                                            <div className="user-info">
+                                                <span className="user-name">{user.name || 'Unknown'}</span>
+                                                <p className="user-bio">{user.bio || 'No bio available'}</p>
+                                                <span className="user-email">{user.email}</span>
+                                            </div>
+                                            <AddFriendButton 
+                                                targetUserId={user.id}
+                                                currentUserId={currentUserId}
+                                            />
                                         </div>
                                     ))}
                                 </div>

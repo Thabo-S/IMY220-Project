@@ -1,0 +1,60 @@
+[{
+  "_id": {
+    "$oid": "68dea11c8c466c64ecea46ca"
+  },
+  "userId": 4,
+  "friends": [
+    1,
+    2
+  ],
+  "incomingRequests": [
+    3,
+    5
+  ],
+  "outgoingRequests": [
+    5
+  ]
+},
+{
+  "_id": {
+    "$oid": "68dea1e58c466c64ecea46cb"
+  },
+  "userId": 1,
+  "friends": [
+    2,
+    4,
+    5,
+    8
+  ],
+  "incomingRequests": [
+    3,
+    6
+  ],
+  "outgoingRequests": [
+    5
+  ]
+},
+{
+  "_id": {
+    "$oid": "68dec6cf8c466c64ecea46ce"
+  },
+  "userId": 5,
+  "friends": [
+    1
+  ],
+  "outgoingRequests": [
+    4
+  ],
+  "incomingRequests": []
+},
+{
+  "_id": {
+    "$oid": "6903c6e90694130d6ae71576"
+  },
+  "userId": 8,
+  "incomingRequests": [],
+  "friends": [
+    1
+  ],
+  "outgoingRequests": []
+}]

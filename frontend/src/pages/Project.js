@@ -15,51 +15,112 @@ const Project = () => {
     const [currentUser, setCurrentUser] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
 
-        const fetchProject = async () => {
+    const [showCheckin, setShowCheckin] = useState(false);
+    const [checkinText, setCheckinText] = useState("");
+    const [checkinFiles, setCheckinFiles] = useState([]);
+
+    const fetchProject = async () => {
         setIsLoading(true);
         try {
             const response = await fetch(`/api/projects/${parseInt(id)}`);
-            if (!response.ok) throw new Error('Project not found');
+            if (!response.ok) throw new Error("Project not found");
             const data = await response.json();
             setProject(data);
         } catch (error) {
-            console.error('Error fetching project:', error);
+            console.error("Error fetching project:", error);
         } finally {
             setIsLoading(false);
         }
     };
 
     useEffect(() => {
-        const storedUserData = localStorage.getItem('user');
-        let storedUser = null;
-        if (storedUserData) {
-            try {
-                storedUser = JSON.parse(storedUserData);
-            } catch (error) {
-                console.error('Error parsing user data:', error);
-            }
+        // Load logged-in user
+        const stored = localStorage.getItem("user");
+        if (stored) {
+            try { setCurrentUser(JSON.parse(stored)); }
+            catch (e) { console.error("Invalid user JSON", e); }
         }
-        setCurrentUser(storedUser);
 
-        const fetchProject = async () => {
-            setIsLoading(true);
-            try {
-                const response = await fetch(`/api/projects/${parseInt(id)}`);
-                if (!response.ok) throw new Error('Project not found');
-                const data = await response.json();
-                setProject(data);
-            } catch (error) {
-                console.error('Error fetching project:', error);
-            } finally {
-                setIsLoading(false);
-            }
-        };
         fetchProject();
     }, [id]);
 
-    if (isLoading) {
-        return <div>Loading...</div>;
-    }
+ 
+    const isOwner = currentUser && project?.creator?.id === currentUser.id;
+    const isTeamMember = currentUser && 
+        Array.isArray(project?.teamMembers) && 
+        project.teamMembers.includes(currentUser.id);
+    const canCheckin = isOwner || isTeamMember;
+
+ 
+    const handleEditProject = async (updatedProject) => {
+        try {
+            const res = await fetch(`/api/projects/${project.id}`, {
+                method: "PUT",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(updatedProject),
+            });
+            if (!res.ok) throw new Error("Failed to update");
+            const data = await res.json();
+            setProject(data);
+            setIsEditing(false);
+        } catch (e) {
+            console.error("Edit error:", e);
+        }
+    };
+
+    const handleDeleteProject = async () => {
+        if (!window.confirm("Delete this project?")) return;
+        try {
+            const res = await fetch(`/api/projects/${project.id}`, {
+                method: "DELETE",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ userId: currentUser?.id })
+            });
+            if (!res.ok) throw new Error("Delete failed");
+            window.location.href = "/profile";
+        } catch (e) {
+            console.error("Delete error:", e);
+        }
+    };
+
+ 
+ 
+    const handleCheckin = async () => {
+        if (!checkinFiles.length && !checkinText.trim()) {
+            alert("Add files or a description");
+            return;
+        }
+
+        setIsLoading(true);
+        const form = new FormData();
+        form.append("userId", currentUser.id);
+        if (checkinText) form.append("text", checkinText);
+        Array.from(checkinFiles).forEach(f => form.append("files", f));
+
+        try {
+            const res = await fetch(`/api/projects/${project.id}/checkin`, {
+                method: "POST",
+                body: form
+            });
+            if (!res.ok) {
+                const err = await res.json();
+                throw new Error(err.message || "Check-in failed");
+            }
+            const updated = await res.json();
+            setProject(updated);
+            setShowCheckin(false);
+            setCheckinText("");
+            setCheckinFiles([]);
+        } catch (e) {
+            alert(e.message);
+        } finally {
+            setIsLoading(false);
+        }
+    };
+
+
+
+    if (isLoading) return <div className="loading">Loading...</div>;
 
     if (!project) {
         return (
@@ -71,43 +132,10 @@ const Project = () => {
                         <p>The project you're looking for doesn't exist.</p>
                     </div>
                 </div>
+                <Footer />
             </>
         );
     }
-
-    const handleEditProject = async (updatedProject) => {
-        try {
-            const response = await fetch(`/api/projects/${project.id}`, {
-                method: 'PUT',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(updatedProject),
-            });
-            if (!response.ok) throw new Error('Failed to update project');
-            const data = await response.json();
-            setProject(data);
-            setIsEditing(false);
-        } catch (error) {
-            console.error('Error updating project:', error);
-        }
-    };
-
-    const handleDeleteProject = async () => {
-        if (window.confirm('Are you sure you want to delete this project?')) {
-            try {
-                const response = await fetch(`/api/projects/${project.id}`, {
-                    method: 'DELETE',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ userId: currentUser?.id })
-                });
-                if (!response.ok) throw new Error('Failed to delete project');
-                window.location.href = '/profile'; 
-            } catch (error) {
-                console.error('Error deleting project:', error);
-            }
-        }
-    };
-
-    const isCurrentUserCreator = currentUser && project.creator?.id === currentUser.id;
 
     if (isEditing) {
         return (
@@ -120,6 +148,7 @@ const Project = () => {
                         onCancel={() => setIsEditing(false)}
                     />
                 </div>
+                <Footer />
             </>
         );
     }
@@ -128,37 +157,94 @@ const Project = () => {
         <>
             <Navbar />
             <div className="project-page">
+
+                {/*  HEADER  */}
                 <header className="project-header">
                     <div className="project-header-main">
                         <h1>{project.name}</h1>
                         <p className="project-description">{project.description}</p>
                         <div className="project-meta">
                             <span className="hashtag">{project.hashtag}</span>
-                            <span className="type">{project.isPublic ? 'Public' : 'Private'}</span>
-                            <span className="creator">By {project.creator?.name || 'Unknown'}</span>
+                            <span className="type">{project.isPublic ? "Public" : "Private"}</span>
+                            <span className="creator">By {project.creator?.name || "Unknown"}</span>
                         </div>
                         {project.image && <img src={project.image} alt={project.name} className="project-image" />}
                     </div>
 
-                    {isCurrentUserCreator && (
+                    {/* Owner actions */}
+                    {isOwner && (
                         <div className="project-actions">
-                            <button className="action-btn primary" onClick={() => setIsEditing(true)}>Edit Project</button>
-                            <button className="action-btn secondary" onClick={handleDeleteProject}>Delete Project</button>
-                            <button className="action-btn secondary" onClick={() => setIsEditing(true)}>Add File</button>
+                            <button className="action-btn primary" onClick={() => setIsEditing(true)}>
+                                Edit Project
+                            </button>
+                            <button className="action-btn secondary" onClick={handleDeleteProject}>
+                                Delete Project
+                            </button>
+                        </div>
+                    )}
+
+                    {/* Member check-in button */}
+                    {canCheckin && !isOwner && (
+                        <div className="project-actions member-actions">
+                            <button className="action-btn secondary" onClick={() => setShowCheckin(true)}>
+                                Upload Files / Check In
+                            </button>
                         </div>
                     )}
                 </header>
 
+                {/*  MAIN CONTENT  */}
                 <main className="project-content">
                     <TeamMembers
                         project={project}
-                        projectId={project.id}  
-                        onTeamUpdate={fetchProject} 
+                        projectId={project.id}
+                        onTeamUpdate={fetchProject}
                     />
-                    <ProjectFiles files={project.files} />
+                    <ProjectFiles files={project.files} projectId={project.id} />
                     <ProjectMessages messages={project.messages} />
                 </main>
+
+                {showCheckin && (
+                    <div className="modal-overlay" onClick={() => setShowCheckin(false)}>
+                        <div className="modal-content" onClick={e => e.stopPropagation()}>
+                            <h3>Check In Project</h3>
+                            <textarea
+                                placeholder="What did you change? (optional)"
+                                value={checkinText}
+                                onChange={e => setCheckinText(e.target.value)}
+                                rows={3}
+                            />
+                            <input
+                                type="file"
+                                multiple
+                                onChange={e => setCheckinFiles(e.target.files)}
+                                style={{ margin: "10px 0" }}
+                            />
+                            <div className="modal-actions">
+                                <button
+                                    className="btn-primary"
+                                    onClick={handleCheckin}
+                                    disabled={isLoading}
+                                >
+                                    {isLoading ? "Checking in..." : "Check In"}
+                                </button>
+                                <button
+                                    className="btn-secondary"
+                                    onClick={() => {
+                                        setShowCheckin(false);
+                                        setCheckinText("");
+                                        setCheckinFiles([]);
+                                    }}
+                                    disabled={isLoading}
+                                >
+                                    Cancel
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                )}
             </div>
+
             <PalmTree />
             <Footer />
         </>

@@ -1,6 +1,5 @@
 "use strict";
 
-function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 var _excluded = ["password"],
   _excluded2 = ["password"];
 function _toConsumableArray(r) { return _arrayWithoutHoles(r) || _iterableToArray(r) || _unsupportedIterableToArray(r) || _nonIterableSpread(); }
@@ -9,11 +8,6 @@ function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) 
 function _iterableToArray(r) { if ("undefined" != typeof Symbol && null != r[Symbol.iterator] || null != r["@@iterator"]) return Array.from(r); }
 function _arrayWithoutHoles(r) { if (Array.isArray(r)) return _arrayLikeToArray(r); }
 function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
-function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
-function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { _defineProperty(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
-function _defineProperty(e, r, t) { return (r = _toPropertyKey(r)) in e ? Object.defineProperty(e, r, { value: t, enumerable: !0, configurable: !0, writable: !0 }) : e[r] = t, e; }
-function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
-function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
 function _regenerator() { /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/babel/babel/blob/main/packages/babel-helpers/LICENSE */ var e, t, r = "function" == typeof Symbol ? Symbol : {}, n = r.iterator || "@@iterator", o = r.toStringTag || "@@toStringTag"; function i(r, n, o, i) { var c = n && n.prototype instanceof Generator ? n : Generator, u = Object.create(c.prototype); return _regeneratorDefine2(u, "_invoke", function (r, n, o) { var i, c, u, f = 0, p = o || [], y = !1, G = { p: 0, n: 0, v: e, a: d, f: d.bind(e, 4), d: function d(t, r) { return i = t, c = 0, u = e, G.n = r, a; } }; function d(r, n) { for (c = r, u = n, t = 0; !y && f && !o && t < p.length; t++) { var o, i = p[t], d = G.p, l = i[2]; r > 3 ? (o = l === n) && (u = i[(c = i[4]) ? 5 : (c = 3, 3)], i[4] = i[5] = e) : i[0] <= d && ((o = r < 2 && d < i[1]) ? (c = 0, G.v = n, G.n = i[1]) : d < l && (o = r < 3 || i[0] > n || n > l) && (i[4] = r, i[5] = n, G.n = l, c = 0)); } if (o || r > 1) return a; throw y = !0, n; } return function (o, p, l) { if (f > 1) throw TypeError("Generator is already running"); for (y && 1 === p && d(p, l), c = p, u = l; (t = c < 2 ? e : u) || !y;) { i || (c ? c < 3 ? (c > 1 && (G.n = -1), d(c, u)) : G.n = u : G.v = u); try { if (f = 2, i) { if (c || (o = "next"), t = i[o]) { if (!(t = t.call(i, u))) throw TypeError("iterator result is not an object"); if (!t.done) return t; u = t.value, c < 2 && (c = 0); } else 1 === c && (t = i["return"]) && t.call(i), c < 2 && (u = TypeError("The iterator does not provide a '" + o + "' method"), c = 1); i = e; } else if ((t = (y = G.n < 0) ? u : r.call(n, G)) !== a) break; } catch (t) { i = e, c = 1, u = t; } finally { f = 1; } } return { value: t, done: y }; }; }(r, o, i), !0), u; } var a = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} t = Object.getPrototypeOf; var c = [][n] ? t(t([][n]())) : (_regeneratorDefine2(t = {}, n, function () { return this; }), t), u = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(c); function f(e) { return Object.setPrototypeOf ? Object.setPrototypeOf(e, GeneratorFunctionPrototype) : (e.__proto__ = GeneratorFunctionPrototype, _regeneratorDefine2(e, o, "GeneratorFunction")), e.prototype = Object.create(u), e; } return GeneratorFunction.prototype = GeneratorFunctionPrototype, _regeneratorDefine2(u, "constructor", GeneratorFunctionPrototype), _regeneratorDefine2(GeneratorFunctionPrototype, "constructor", GeneratorFunction), GeneratorFunction.displayName = "GeneratorFunction", _regeneratorDefine2(GeneratorFunctionPrototype, o, "GeneratorFunction"), _regeneratorDefine2(u), _regeneratorDefine2(u, o, "Generator"), _regeneratorDefine2(u, n, function () { return this; }), _regeneratorDefine2(u, "toString", function () { return "[object Generator]"; }), (_regenerator = function _regenerator() { return { w: i, m: f }; })(); }
 function _regeneratorDefine2(e, r, n, t) { var i = Object.defineProperty; try { i({}, "", {}); } catch (e) { i = 0; } _regeneratorDefine2 = function _regeneratorDefine(e, r, n, t) { function o(r, n) { _regeneratorDefine2(e, r, function (e) { return this._invoke(r, n, e); }); } r ? i ? i(e, r, { value: n, enumerable: !t, configurable: !t, writable: !t }) : e[r] = n : (o("next", 0), o("throw", 1), o("return", 2)); }, _regeneratorDefine2(e, r, n, t); }
 function _objectWithoutProperties(e, t) { if (null == e) return {}; var o, r, i = _objectWithoutPropertiesLoose(e, t); if (Object.getOwnPropertySymbols) { var n = Object.getOwnPropertySymbols(e); for (r = 0; r < n.length; r++) o = n[r], -1 === t.indexOf(o) && {}.propertyIsEnumerable.call(e, o) && (i[o] = e[o]); } return i; }
@@ -29,12 +23,14 @@ var app = express();
 var port = 3000;
 app.use(express["static"]('frontend/public'));
 app.use(express.json());
+app.use('/uploads', express["static"]('backend/uploadedFiles'));
 var storage = multer.diskStorage({
   destination: function destination(req, file, cb) {
     return cb(null, 'backend/uploadedFiles');
   },
   filename: function filename(req, file, cb) {
-    return cb(null, "".concat(Date.now(), "-").concat(file.originalname));
+    var uniqueName = "".concat(Date.now(), "-").concat(file.originalname);
+    cb(null, uniqueName);
   }
 });
 var upload = multer({
@@ -46,25 +42,25 @@ function getDb() {
   return _getDb.apply(this, arguments);
 } //Login
 function _getDb() {
-  _getDb = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee26() {
-    var _t42;
-    return _regenerator().w(function (_context26) {
-      while (1) switch (_context26.p = _context26.n) {
+  _getDb = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee33() {
+    var _t49;
+    return _regenerator().w(function (_context33) {
+      while (1) switch (_context33.p = _context33.n) {
         case 0:
-          _context26.p = 0;
-          _context26.n = 1;
+          _context33.p = 0;
+          _context33.n = 1;
           return client.connect();
         case 1:
-          return _context26.a(2, client.db("repo-river"));
+          return _context33.a(2, client.db("repo-river"));
         case 2:
-          _context26.p = 2;
-          _t42 = _context26.v;
-          console.error("Database connection error:", _t42);
-          throw _t42;
+          _context33.p = 2;
+          _t49 = _context33.v;
+          console.error("Database connection error:", _t49);
+          throw _t49;
         case 3:
-          return _context26.a(2);
+          return _context33.a(2);
       }
-    }, _callee26, null, [[0, 2]]);
+    }, _callee33, null, [[0, 2]]);
   }));
   return _getDb.apply(this, arguments);
 }
@@ -363,16 +359,10 @@ app.put('/api/users/:id', /*#__PURE__*/function () {
   };
 }());
 
-// Project routes
-app.post('/api/projects', upload.fields([{
-  name: 'files',
-  maxCount: 10
-}, {
-  name: 'image',
-  maxCount: 1
-}]), /*#__PURE__*/function () {
+// AVATAR UPLOAD 
+app.put('/api/users/:id/avatar', upload.single('avatar'), /*#__PURE__*/function () {
   var _ref6 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee6(req, res) {
-    var _yield$db$collection$, db, _req$body3, name, description, hashtag, isPublic, creatorId, files, image, newProject, _t6, _t7, _t8, _t9, _t0, _t1, _t10, _t11, _t12, _t13, _t14, _t15, _t16, _t17, _t18, _t19, _t20;
+    var db, userId, avatarPath, result, _t6;
     return _regenerator().w(function (_context6) {
       while (1) switch (_context6.p = _context6.n) {
         case 0:
@@ -381,97 +371,67 @@ app.post('/api/projects', upload.fields([{
           return getDb();
         case 1:
           db = _context6.v;
-          _req$body3 = req.body, name = _req$body3.name, description = _req$body3.description, hashtag = _req$body3.hashtag, isPublic = _req$body3.isPublic, creatorId = _req$body3.creatorId;
-          files = req.files['files'] ? req.files['files'].map(function (file) {
-            return {
-              id: Date.now() + Math.random(),
-              name: file.originalname,
-              path: file.path,
-              created: new Date().toISOString()
-            };
-          }) : [];
-          image = req.files['image'] ? "/uploads/".concat(req.files['image'][0].filename) : null;
-          _context6.n = 2;
-          return db.collection("projects").find().sort({
-            id: -1
-          }).limit(1).toArray();
-        case 2:
-          _t8 = _yield$db$collection$ = _context6.v[0];
-          _t7 = _t8 === null;
-          if (_t7) {
-            _context6.n = 3;
+          userId = parseInt(req.params.id);
+          if (req.file) {
+            _context6.n = 2;
             break;
           }
-          _t7 = _yield$db$collection$ === void 0;
+          return _context6.a(2, res.status(400).json({
+            message: "No file uploaded"
+          }));
+        case 2:
+          avatarPath = "/uploads/".concat(req.file.filename);
+          _context6.n = 3;
+          return db.collection("users").updateOne({
+            id: userId
+          }, {
+            $set: {
+              avatar: avatarPath
+            }
+          });
         case 3:
-          if (!_t7) {
+          result = _context6.v;
+          if (!(result.matchedCount === 0)) {
             _context6.n = 4;
             break;
           }
-          _t9 = void 0;
-          _context6.n = 5;
-          break;
+          return _context6.a(2, res.status(404).json({
+            message: "User not found"
+          }));
         case 4:
-          _t9 = _yield$db$collection$.id;
-        case 5:
-          _t0 = _t9;
-          _t6 = _t0 + 1;
-          if (_t6) {
-            _context6.n = 6;
-            break;
-          }
-          _t6 = 1;
-        case 6:
-          _t1 = _t6;
-          _t10 = name;
-          _t11 = description;
-          _t12 = hashtag;
-          _t13 = isPublic === 'true';
-          _t14 = parseInt(creatorId);
-          _t15 = new Date().toISOString();
-          _t16 = new Date().toISOString();
-          _t17 = files;
-          _t18 = image;
-          _t19 = [];
-          newProject = {
-            id: _t1,
-            name: _t10,
-            description: _t11,
-            hashtag: _t12,
-            isPublic: _t13,
-            creatorId: _t14,
-            createdAt: _t15,
-            downloads: 0,
-            lastActivity: _t16,
-            files: _t17,
-            image: _t18,
-            messages: _t19,
-            lockedBy: null
-          };
-          _context6.n = 7;
-          return db.collection("projects").insertOne(newProject);
-        case 7:
-          res.status(201).json(newProject);
-          _context6.n = 9;
+          res.json({
+            success: true,
+            avatar: avatarPath
+          });
+          _context6.n = 6;
           break;
-        case 8:
-          _context6.p = 8;
-          _t20 = _context6.v;
+        case 5:
+          _context6.p = 5;
+          _t6 = _context6.v;
+          console.error('Avatar upload error:', _t6);
           res.status(500).json({
             message: "Server error"
           });
-        case 9:
+        case 6:
           return _context6.a(2);
       }
-    }, _callee6, null, [[0, 8]]);
+    }, _callee6, null, [[0, 5]]);
   }));
   return function (_x1, _x10) {
     return _ref6.apply(this, arguments);
   };
 }());
-app.get('/api/projects', /*#__PURE__*/function () {
+
+// Project routes
+app.post('/api/projects', upload.fields([{
+  name: 'files',
+  maxCount: 10
+}, {
+  name: 'image',
+  maxCount: 1
+}]), /*#__PURE__*/function () {
   var _ref7 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee7(req, res) {
-    var db, creatorId, query, projects, _t21;
+    var _yield$db$collection$, db, _req$body3, name, description, hashtag, isPublic, creatorId, files, image, newProject, _t7, _t8, _t9, _t0, _t1, _t10, _t11, _t12, _t13, _t14, _t15, _t16, _t17, _t18, _t19, _t20, _t21;
     return _regenerator().w(function (_context7) {
       while (1) switch (_context7.p = _context7.n) {
         case 0:
@@ -480,35 +440,99 @@ app.get('/api/projects', /*#__PURE__*/function () {
           return getDb();
         case 1:
           db = _context7.v;
-          creatorId = req.query.creatorId ? parseInt(req.query.creatorId) : null;
-          query = creatorId ? {
-            creatorId: creatorId
-          } : {};
+          _req$body3 = req.body, name = _req$body3.name, description = _req$body3.description, hashtag = _req$body3.hashtag, isPublic = _req$body3.isPublic, creatorId = _req$body3.creatorId;
+          files = req.files['files'] ? req.files['files'].map(function (file) {
+            return {
+              id: Date.now() + Math.random(),
+              name: file.originalname,
+              path: file.path,
+              url: "/uploads/".concat(file.filename),
+              created: new Date().toISOString()
+            };
+          }) : [];
+          image = req.files['image'] ? "/uploads/".concat(req.files['image'][0].filename) : null;
           _context7.n = 2;
-          return db.collection("projects").find(query).toArray();
+          return db.collection("projects").find().sort({
+            id: -1
+          }).limit(1).toArray();
         case 2:
-          projects = _context7.v;
-          res.json(projects);
-          _context7.n = 4;
-          break;
+          _t9 = _yield$db$collection$ = _context7.v[0];
+          _t8 = _t9 === null;
+          if (_t8) {
+            _context7.n = 3;
+            break;
+          }
+          _t8 = _yield$db$collection$ === void 0;
         case 3:
-          _context7.p = 3;
+          if (!_t8) {
+            _context7.n = 4;
+            break;
+          }
+          _t0 = void 0;
+          _context7.n = 5;
+          break;
+        case 4:
+          _t0 = _yield$db$collection$.id;
+        case 5:
+          _t1 = _t0;
+          _t7 = _t1 + 1;
+          if (_t7) {
+            _context7.n = 6;
+            break;
+          }
+          _t7 = 1;
+        case 6:
+          _t10 = _t7;
+          _t11 = name;
+          _t12 = description;
+          _t13 = hashtag;
+          _t14 = isPublic === 'true';
+          _t15 = parseInt(creatorId);
+          _t16 = new Date().toISOString();
+          _t17 = new Date().toISOString();
+          _t18 = files;
+          _t19 = image;
+          _t20 = [];
+          newProject = {
+            id: _t10,
+            name: _t11,
+            description: _t12,
+            hashtag: _t13,
+            isPublic: _t14,
+            creatorId: _t15,
+            createdAt: _t16,
+            downloads: 0,
+            lastActivity: _t17,
+            files: _t18,
+            image: _t19,
+            messages: _t20,
+            lockedBy: null
+          };
+          _context7.n = 7;
+          return db.collection("projects").insertOne(newProject);
+        case 7:
+          res.status(201).json(newProject);
+          _context7.n = 9;
+          break;
+        case 8:
+          _context7.p = 8;
           _t21 = _context7.v;
+          console.error('Error creating project:', _t21);
           res.status(500).json({
             message: "Server error"
           });
-        case 4:
+        case 9:
           return _context7.a(2);
       }
-    }, _callee7, null, [[0, 3]]);
+    }, _callee7, null, [[0, 8]]);
   }));
   return function (_x11, _x12) {
     return _ref7.apply(this, arguments);
   };
 }());
-app.get('/api/projects/:id', /*#__PURE__*/function () {
+app.get('/api/projects', /*#__PURE__*/function () {
   var _ref8 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee8(req, res) {
-    var db, projectId, project, _t22;
+    var db, creatorId, query, projects, _t22;
     return _regenerator().w(function (_context8) {
       while (1) switch (_context8.p = _context8.n) {
         case 0:
@@ -517,9 +541,46 @@ app.get('/api/projects/:id', /*#__PURE__*/function () {
           return getDb();
         case 1:
           db = _context8.v;
+          creatorId = req.query.creatorId ? parseInt(req.query.creatorId) : null;
+          query = creatorId ? {
+            creatorId: creatorId
+          } : {};
+          _context8.n = 2;
+          return db.collection("projects").find(query).toArray();
+        case 2:
+          projects = _context8.v;
+          res.json(projects);
+          _context8.n = 4;
+          break;
+        case 3:
+          _context8.p = 3;
+          _t22 = _context8.v;
+          res.status(500).json({
+            message: "Server error"
+          });
+        case 4:
+          return _context8.a(2);
+      }
+    }, _callee8, null, [[0, 3]]);
+  }));
+  return function (_x13, _x14) {
+    return _ref8.apply(this, arguments);
+  };
+}());
+app.get('/api/projects/:id', /*#__PURE__*/function () {
+  var _ref9 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee9(req, res) {
+    var db, projectId, project, _t23;
+    return _regenerator().w(function (_context9) {
+      while (1) switch (_context9.p = _context9.n) {
+        case 0:
+          _context9.p = 0;
+          _context9.n = 1;
+          return getDb();
+        case 1:
+          db = _context9.v;
           projectId = parseInt(req.params.id);
           console.log("Fetching project with id: ".concat(projectId));
-          _context8.n = 2;
+          _context9.n = 2;
           return db.collection("projects").aggregate([{
             $match: {
               id: {
@@ -576,102 +637,36 @@ app.get('/api/projects/:id', /*#__PURE__*/function () {
             $unset: ["creatorDetails", "messageUsers"]
           }]).toArray();
         case 2:
-          project = _context8.v;
+          project = _context9.v;
           if (!(project.length === 0)) {
-            _context8.n = 3;
+            _context9.n = 3;
             break;
           }
           console.log("Project ".concat(projectId, " not found"));
-          return _context8.a(2, res.status(404).json({
+          return _context9.a(2, res.status(404).json({
             message: "Project not found"
           }));
         case 3:
           console.log('Resolved project:', project[0]);
           res.json(project[0]);
-          _context8.n = 5;
+          _context9.n = 5;
           break;
         case 4:
-          _context8.p = 4;
-          _t22 = _context8.v;
-          console.error('Aggregation error:', _t22);
+          _context9.p = 4;
+          _t23 = _context9.v;
+          console.error('Aggregation error:', _t23);
           res.status(500).json({
             message: "Server error"
           });
         case 5:
-          return _context8.a(2);
-      }
-    }, _callee8, null, [[0, 4]]);
-  }));
-  return function (_x13, _x14) {
-    return _ref8.apply(this, arguments);
-  };
-}());
-app.post('/api/projects', upload.fields([{
-  name: 'files',
-  maxCount: 10
-}, {
-  name: 'image',
-  maxCount: 1
-}]), /*#__PURE__*/function () {
-  var _ref9 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee9(req, res) {
-    var db, _req$body4, name, description, hashtag, isPublic, creatorId, files, image, newProject, result, _t23;
-    return _regenerator().w(function (_context9) {
-      while (1) switch (_context9.p = _context9.n) {
-        case 0:
-          _context9.p = 0;
-          _context9.n = 1;
-          return getDb();
-        case 1:
-          db = _context9.v;
-          _req$body4 = req.body, name = _req$body4.name, description = _req$body4.description, hashtag = _req$body4.hashtag, isPublic = _req$body4.isPublic, creatorId = _req$body4.creatorId;
-          files = req.files['files'] ? req.files['files'].map(function (file) {
-            return file.path;
-          }) : [];
-          image = req.files['image'] ? req.files['image'][0].path : null;
-          newProject = {
-            name: name,
-            description: description,
-            hashtags: hashtag ? hashtag.split(',').map(function (tag) {
-              return tag.trim().replace('#', '');
-            }) : [],
-            files: files,
-            image: image,
-            creatorId: parseInt(creatorId) || 1,
-            isPublic: isPublic === 'true',
-            // Convert string to boolean
-            createdAt: new Date().toISOString().split("T")[0],
-            downloads: 0,
-            messages: [],
-            lastActivity: "User created project at ".concat(new Date().toLocaleString("en-US", {
-              timeZone: "Africa/Johannesburg"
-            }))
-          };
-          _context9.n = 2;
-          return db.collection("projects").insertOne(newProject);
-        case 2:
-          result = _context9.v;
-          res.status(201).json(_objectSpread(_objectSpread({}, newProject), {}, {
-            id: result.insertedId
-          }));
-          _context9.n = 4;
-          break;
-        case 3:
-          _context9.p = 3;
-          _t23 = _context9.v;
-          console.error('Error creating project:', _t23);
-          res.status(500).json({
-            message: "Server error"
-          });
-        case 4:
           return _context9.a(2);
       }
-    }, _callee9, null, [[0, 3]]);
+    }, _callee9, null, [[0, 4]]);
   }));
   return function (_x15, _x16) {
     return _ref9.apply(this, arguments);
   };
 }());
-//edit
 app.put('/api/projects/:id', upload.fields([{
   name: 'files',
   maxCount: 10
@@ -680,7 +675,7 @@ app.put('/api/projects/:id', upload.fields([{
   maxCount: 1
 }]), /*#__PURE__*/function () {
   var _ref0 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee0(req, res) {
-    var db, projectId, _req$body5, name, description, hashtag, isPublic, files, image, update, result, updatedProject, _t24;
+    var db, projectId, _req$body4, name, description, hashtag, isPublic, files, image, update, result, updatedProject, _t24;
     return _regenerator().w(function (_context0) {
       while (1) switch (_context0.p = _context0.n) {
         case 0:
@@ -690,12 +685,13 @@ app.put('/api/projects/:id', upload.fields([{
         case 1:
           db = _context0.v;
           projectId = parseInt(req.params.id);
-          _req$body5 = req.body, name = _req$body5.name, description = _req$body5.description, hashtag = _req$body5.hashtag, isPublic = _req$body5.isPublic;
+          _req$body4 = req.body, name = _req$body4.name, description = _req$body4.description, hashtag = _req$body4.hashtag, isPublic = _req$body4.isPublic;
           files = req.files['files'] ? req.files['files'].map(function (file) {
             return {
               id: Date.now() + Math.random(),
               name: file.originalname,
               path: file.path,
+              url: "/uploads/".concat(file.filename),
               created: new Date().toISOString()
             };
           }) : [];
@@ -705,9 +701,7 @@ app.put('/api/projects/:id', upload.fields([{
             description: description,
             hashtag: hashtag,
             isPublic: isPublic === 'true',
-            lastActivity: "User updated project at ".concat(new Date().toLocaleString("en-US", {
-              timeZone: "Africa/Johannesburg"
-            }))
+            lastActivity: new Date().toISOString()
           };
           if (files.length) update.$push = {
             files: {
@@ -743,6 +737,7 @@ app.put('/api/projects/:id', upload.fields([{
         case 5:
           _context0.p = 5;
           _t24 = _context0.v;
+          console.error('Error updating project:', _t24);
           res.status(500).json({
             message: "Server error"
           });
@@ -804,10 +799,10 @@ app["delete"]('/api/projects/:id', /*#__PURE__*/function () {
   };
 }());
 
-// Project Collaboration
+// Project Collaboration 
 app.post('/api/projects/:id/checkin', upload.array('files', 10), /*#__PURE__*/function () {
   var _ref10 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee10(req, res) {
-    var db, projectId, _req$body6, userId, text, files, message, update, result, updatedProject, _t26;
+    var db, projectId, _req$body5, userId, text, files, message, update, result, updatedProject, _t26;
     return _regenerator().w(function (_context10) {
       while (1) switch (_context10.p = _context10.n) {
         case 0:
@@ -817,12 +812,13 @@ app.post('/api/projects/:id/checkin', upload.array('files', 10), /*#__PURE__*/fu
         case 1:
           db = _context10.v;
           projectId = parseInt(req.params.id);
-          _req$body6 = req.body, userId = _req$body6.userId, text = _req$body6.text;
+          _req$body5 = req.body, userId = _req$body5.userId, text = _req$body5.text;
           files = req.files ? req.files.map(function (file) {
             return {
               id: Date.now() + Math.random(),
               name: file.originalname,
               path: file.path,
+              url: "/uploads/".concat(file.filename),
               created: new Date().toISOString()
             };
           }) : [];
@@ -870,6 +866,7 @@ app.post('/api/projects/:id/checkin', upload.array('files', 10), /*#__PURE__*/fu
         case 5:
           _context10.p = 5;
           _t26 = _context10.v;
+          console.error('Check-in error:', _t26);
           res.status(500).json({
             message: "Server error"
           });
@@ -985,7 +982,7 @@ app.get('/api/projects/:id/team', /*#__PURE__*/function () {
 }());
 app.post('/api/projects/:id/team', /*#__PURE__*/function () {
   var _ref13 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee13(req, res) {
-    var _project$teamMembers, _project$teamMembers2, db, projectId, _req$body7, userId, memberId, action, project, update, updatedProject, _t29;
+    var _project$teamMembers, _project$teamMembers2, db, projectId, _req$body6, userId, memberId, action, project, update, updatedProject, _t29;
     return _regenerator().w(function (_context13) {
       while (1) switch (_context13.p = _context13.n) {
         case 0:
@@ -995,7 +992,7 @@ app.post('/api/projects/:id/team', /*#__PURE__*/function () {
         case 1:
           db = _context13.v;
           projectId = parseInt(req.params.id);
-          _req$body7 = req.body, userId = _req$body7.userId, memberId = _req$body7.memberId, action = _req$body7.action;
+          _req$body6 = req.body, userId = _req$body6.userId, memberId = _req$body6.memberId, action = _req$body6.action;
           _context13.n = 2;
           return db.collection("projects").findOne({
             id: projectId,
@@ -1131,7 +1128,7 @@ app.get('/api/projects/:id/files/:fileId', /*#__PURE__*/function () {
 // Friends routes
 app.post('/api/friends', /*#__PURE__*/function () {
   var _ref15 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee15(req, res) {
-    var db, _req$body8, userId, friendId, action, friendsDoc, friends, incomingRequests, outgoingRequests, receiverDoc, receiverIncoming, senderDoc, senderOutgoing, senderFriends, _senderDoc, _senderOutgoing, otherDoc, otherFriends, _t31;
+    var db, _req$body7, userId, friendId, action, friendsDoc, friends, incomingRequests, outgoingRequests, receiverDoc, receiverIncoming, senderDoc, senderOutgoing, senderFriends, _senderDoc, _senderOutgoing, otherDoc, otherFriends, _t31;
     return _regenerator().w(function (_context15) {
       while (1) switch (_context15.p = _context15.n) {
         case 0:
@@ -1140,7 +1137,7 @@ app.post('/api/friends', /*#__PURE__*/function () {
           return getDb();
         case 1:
           db = _context15.v;
-          _req$body8 = req.body, userId = _req$body8.userId, friendId = _req$body8.friendId, action = _req$body8.action;
+          _req$body7 = req.body, userId = _req$body7.userId, friendId = _req$body7.friendId, action = _req$body7.action;
           _context15.n = 2;
           return db.collection("friends").findOne({
             userId: userId
@@ -1364,12 +1361,12 @@ app.get('/api/friends/:userId', /*#__PURE__*/function () {
 }());
 app["delete"]('/api/friends', /*#__PURE__*/function () {
   var _ref17 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee17(req, res) {
-    var _req$body9, userId, friendId, db, _t33;
+    var _req$body8, userId, friendId, db, _t33;
     return _regenerator().w(function (_context17) {
       while (1) switch (_context17.p = _context17.n) {
         case 0:
           _context17.p = 0;
-          _req$body9 = req.body, userId = _req$body9.userId, friendId = _req$body9.friendId;
+          _req$body8 = req.body, userId = _req$body8.userId, friendId = _req$body8.friendId;
           _context17.n = 1;
           return getDb();
         case 1:
@@ -1413,15 +1410,16 @@ app["delete"]('/api/friends', /*#__PURE__*/function () {
     return _ref17.apply(this, arguments);
   };
 }());
+
 // Friend Requests
 app.post('/api/friend-request', /*#__PURE__*/function () {
   var _ref18 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee18(req, res) {
-    var _req$body0, from, to, db, friendsDoc, existingRequest, _t34;
+    var _req$body9, from, to, db, friendsDoc, existingRequest, _t34;
     return _regenerator().w(function (_context18) {
       while (1) switch (_context18.p = _context18.n) {
         case 0:
           _context18.p = 0;
-          _req$body0 = req.body, from = _req$body0.from, to = _req$body0.to;
+          _req$body9 = req.body, from = _req$body9.from, to = _req$body9.to;
           _context18.n = 1;
           return getDb();
         case 1:
@@ -1533,12 +1531,12 @@ app.get('/api/friend-requests/pending/:userId', /*#__PURE__*/function () {
 }());
 app.post('/api/friend-request/accept', /*#__PURE__*/function () {
   var _ref20 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee20(req, res) {
-    var _req$body1, from, to, db, _t36;
+    var _req$body0, from, to, db, _t36;
     return _regenerator().w(function (_context20) {
       while (1) switch (_context20.p = _context20.n) {
         case 0:
           _context20.p = 0;
-          _req$body1 = req.body, from = _req$body1.from, to = _req$body1.to;
+          _req$body0 = req.body, from = _req$body0.from, to = _req$body0.to;
           _context20.n = 1;
           return getDb();
         case 1:
@@ -1599,12 +1597,12 @@ app.post('/api/friend-request/accept', /*#__PURE__*/function () {
 }());
 app.post('/api/friend-request/reject', /*#__PURE__*/function () {
   var _ref21 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee21(req, res) {
-    var _req$body10, from, to, db, _t37;
+    var _req$body1, from, to, db, _t37;
     return _regenerator().w(function (_context21) {
       while (1) switch (_context21.p = _context21.n) {
         case 0:
           _context21.p = 0;
-          _req$body10 = req.body, from = _req$body10.from, to = _req$body10.to;
+          _req$body1 = req.body, from = _req$body1.from, to = _req$body1.to;
           _context21.n = 1;
           return getDb();
         case 1:
@@ -1643,12 +1641,12 @@ app.post('/api/friend-request/reject', /*#__PURE__*/function () {
 }());
 app.post('/api/friend-request/cancel', /*#__PURE__*/function () {
   var _ref22 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee22(req, res) {
-    var _req$body11, from, to, db, _t38;
+    var _req$body10, from, to, db, _t38;
     return _regenerator().w(function (_context22) {
       while (1) switch (_context22.p = _context22.n) {
         case 0:
           _context22.p = 0;
-          _req$body11 = req.body, from = _req$body11.from, to = _req$body11.to;
+          _req$body10 = req.body, from = _req$body10.from, to = _req$body10.to;
           _context22.n = 1;
           return getDb();
         case 1:
@@ -1683,7 +1681,6 @@ app.post('/api/friend-request/cancel', /*#__PURE__*/function () {
 }());
 
 // Activity feeds
-// Local activity feed: user + their accepted friends
 app.get('/api/activity/local/:userId', /*#__PURE__*/function () {
   var _ref23 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee23(req, res) {
     var db, userId, friendData, friendIds, allowedUserIds, projects, users, userMap, activities, _t39;
@@ -1695,7 +1692,7 @@ app.get('/api/activity/local/:userId', /*#__PURE__*/function () {
           return getDb();
         case 1:
           db = _context23.v;
-          userId = parseInt(req.params.userId); // Fetch the logged-in user's friends
+          userId = parseInt(req.params.userId);
           _context23.n = 2;
           return db.collection("friends").findOne({
             userId: userId
@@ -1706,10 +1703,6 @@ app.get('/api/activity/local/:userId', /*#__PURE__*/function () {
             return parseInt(f);
           }) : [];
           allowedUserIds = [userId].concat(_toConsumableArray(friendIds));
-          console.log("Fetching local activity for user:", userId);
-          console.log("Allowed IDs:", allowedUserIds);
-
-          // Get projects created by these users
           _context23.n = 3;
           return db.collection("projects").find({
             creatorId: {
@@ -1739,14 +1732,11 @@ app.get('/api/activity/local/:userId', /*#__PURE__*/function () {
               avatar: u.avatar
             };
           });
-
-          // Format response with user info + activity label
           activities = projects.map(function (p) {
             var _userMap$p$creatorId, _userMap$p$creatorId2;
             return {
               id: p.id,
               type: p.type || "update",
-              // default if no type
               message: p.message || null,
               time: p.lastActivity || p.createdAt,
               project: {
@@ -1801,7 +1791,6 @@ app.get('/api/activity/global', /*#__PURE__*/function () {
           }).toArray();
         case 2:
           projects = _context24.v;
-          // Get all creator IDs
           creatorIds = projects.map(function (p) {
             return p.creatorId;
           });
@@ -1820,7 +1809,6 @@ app.get('/api/activity/global', /*#__PURE__*/function () {
           activities = [];
           projects.forEach(function (project) {
             if (project.messages && project.messages.length > 0) {
-              // Get all messages from this project
               project.messages.forEach(function (message) {
                 var activityUser = userMap[project.creatorId] || {
                   name: 'Unknown User',
@@ -1847,8 +1835,6 @@ app.get('/api/activity/global', /*#__PURE__*/function () {
               });
             }
           });
-
-          // Sort by time (newest first)
           activities.sort(function (a, b) {
             return new Date(b.time) - new Date(a.time);
           });
@@ -1968,21 +1954,838 @@ app.get('/api/search', /*#__PURE__*/function () {
   };
 }());
 
+// Get ALL users 
+app.get('/api/users/all', /*#__PURE__*/function () {
+  var _ref26 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee26(req, res) {
+    var db, users, _t42;
+    return _regenerator().w(function (_context26) {
+      while (1) switch (_context26.p = _context26.n) {
+        case 0:
+          _context26.p = 0;
+          _context26.n = 1;
+          return getDb();
+        case 1:
+          db = _context26.v;
+          _context26.n = 2;
+          return db.collection("users").find({}, {
+            projection: {
+              password: 0
+            }
+          }).toArray();
+        case 2:
+          users = _context26.v;
+          res.json(users);
+          _context26.n = 4;
+          break;
+        case 3:
+          _context26.p = 3;
+          _t42 = _context26.v;
+          console.error('Error fetching all users:', _t42);
+          res.status(500).json({
+            message: "Server error"
+          });
+        case 4:
+          return _context26.a(2);
+      }
+    }, _callee26, null, [[0, 3]]);
+  }));
+  return function (_x53, _x54) {
+    return _ref26.apply(this, arguments);
+  };
+}());
+
+// Transfer ownership 
+app.post('/api/projects/:id/transfer-ownership', /*#__PURE__*/function () {
+  var _ref27 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee27(req, res) {
+    var db, projectId, _req$body11, currentOwnerId, newOwnerId, parsedCurrentOwnerId, parsedNewOwnerId, project, newOwner, updateOps, result, _t43;
+    return _regenerator().w(function (_context27) {
+      while (1) switch (_context27.p = _context27.n) {
+        case 0:
+          _context27.p = 0;
+          _context27.n = 1;
+          return getDb();
+        case 1:
+          db = _context27.v;
+          projectId = parseInt(req.params.id);
+          _req$body11 = req.body, currentOwnerId = _req$body11.currentOwnerId, newOwnerId = _req$body11.newOwnerId;
+          parsedCurrentOwnerId = parseInt(currentOwnerId);
+          parsedNewOwnerId = parseInt(newOwnerId);
+          if (!(isNaN(parsedCurrentOwnerId) || isNaN(parsedNewOwnerId))) {
+            _context27.n = 2;
+            break;
+          }
+          return _context27.a(2, res.status(400).json({
+            message: "Invalid user IDs"
+          }));
+        case 2:
+          _context27.n = 3;
+          return db.collection("projects").findOne({
+            id: projectId,
+            creatorId: parsedCurrentOwnerId
+          });
+        case 3:
+          project = _context27.v;
+          if (project) {
+            _context27.n = 4;
+            break;
+          }
+          return _context27.a(2, res.status(403).json({
+            message: "Not authorized or project not found"
+          }));
+        case 4:
+          _context27.n = 5;
+          return db.collection("users").findOne({
+            id: parsedNewOwnerId
+          });
+        case 5:
+          newOwner = _context27.v;
+          if (newOwner) {
+            _context27.n = 6;
+            break;
+          }
+          return _context27.a(2, res.status(404).json({
+            message: "New owner not found"
+          }));
+        case 6:
+          if (Array.isArray(project.teamMembers)) {
+            _context27.n = 9;
+            break;
+          }
+          _context27.n = 7;
+          return db.collection("projects").updateOne({
+            id: projectId
+          }, {
+            $set: {
+              teamMembers: []
+            }
+          });
+        case 7:
+          _context27.n = 8;
+          return db.collection("projects").findOne({
+            id: projectId
+          });
+        case 8:
+          project = _context27.v;
+          if (project) {
+            _context27.n = 9;
+            break;
+          }
+          return _context27.a(2, res.status(500).json({
+            message: "Failed to refresh project"
+          }));
+        case 9:
+          if (project.teamMembers.includes(parsedNewOwnerId)) {
+            _context27.n = 10;
+            break;
+          }
+          return _context27.a(2, res.status(400).json({
+            message: "New owner must be a current team member"
+          }));
+        case 10:
+          // update
+          updateOps = {
+            $set: {
+              creatorId: parsedNewOwnerId,
+              lastActivity: new Date().toISOString()
+            },
+            $pull: {
+              teamMembers: parsedNewOwnerId
+            },
+            $addToSet: {
+              teamMembers: parsedCurrentOwnerId
+            }
+          };
+          _context27.n = 11;
+          return db.collection("projects").updateOne({
+            id: projectId
+          }, updateOps);
+        case 11:
+          result = _context27.v;
+          if (!(result.matchedCount === 0)) {
+            _context27.n = 12;
+            break;
+          }
+          return _context27.a(2, res.status(404).json({
+            message: "Project not found"
+          }));
+        case 12:
+          res.json({
+            success: true,
+            message: "Ownership transferred successfully"
+          });
+          _context27.n = 14;
+          break;
+        case 13:
+          _context27.p = 13;
+          _t43 = _context27.v;
+          console.error('Error transferring ownership:', _t43);
+          res.status(500).json({
+            message: "Server error",
+            details: _t43.message
+          });
+        case 14:
+          return _context27.a(2);
+      }
+    }, _callee27, null, [[0, 13]]);
+  }));
+  return function (_x55, _x56) {
+    return _ref27.apply(this, arguments);
+  };
+}());
+
+// Checkin route to unlock project
+app.post('/api/projects/:id/checkin', upload.array('files', 10), /*#__PURE__*/function () {
+  var _ref28 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee28(req, res) {
+    var db, projectId, _req$body12, userId, text, files, message, updateFields, pushOperations, project, result, updatedProject, _t44;
+    return _regenerator().w(function (_context28) {
+      while (1) switch (_context28.p = _context28.n) {
+        case 0:
+          _context28.p = 0;
+          _context28.n = 1;
+          return getDb();
+        case 1:
+          db = _context28.v;
+          projectId = parseInt(req.params.id);
+          _req$body12 = req.body, userId = _req$body12.userId, text = _req$body12.text;
+          files = req.files ? req.files.map(function (file) {
+            return {
+              id: Date.now() + Math.random(),
+              name: file.originalname,
+              path: file.path,
+              url: "/uploads/".concat(file.filename),
+              created: new Date().toISOString()
+            };
+          }) : [];
+          message = {
+            id: Date.now(),
+            userId: parseInt(userId),
+            text: text || 'Checked in project',
+            time: new Date().toISOString()
+          };
+          updateFields = {
+            lastActivity: message.time,
+            lockedBy: null // UNLOCK the project
+          };
+          pushOperations = {
+            messages: message
+          };
+          if (files.length > 0) {
+            pushOperations.files = {
+              $each: files
+            };
+          }
+
+          // Check if project is locked by this user
+          _context28.n = 2;
+          return db.collection("projects").findOne({
+            id: projectId,
+            lockedBy: parseInt(userId)
+          });
+        case 2:
+          project = _context28.v;
+          if (project) {
+            _context28.n = 3;
+            break;
+          }
+          return _context28.a(2, res.status(403).json({
+            message: "Project not checked out by you or doesn't exist"
+          }));
+        case 3:
+          _context28.n = 4;
+          return db.collection("projects").updateOne({
+            id: projectId
+          }, {
+            $set: updateFields,
+            $push: pushOperations
+          });
+        case 4:
+          result = _context28.v;
+          if (!(result.matchedCount === 0)) {
+            _context28.n = 5;
+            break;
+          }
+          return _context28.a(2, res.status(404).json({
+            message: "Project not found"
+          }));
+        case 5:
+          _context28.n = 6;
+          return db.collection("projects").findOne({
+            id: projectId
+          });
+        case 6:
+          updatedProject = _context28.v;
+          res.json(updatedProject);
+          _context28.n = 8;
+          break;
+        case 7:
+          _context28.p = 7;
+          _t44 = _context28.v;
+          console.error('Check-in error:', _t44);
+          res.status(500).json({
+            message: "Server error"
+          });
+        case 8:
+          return _context28.a(2);
+      }
+    }, _callee28, null, [[0, 7]]);
+  }));
+  return function (_x57, _x58) {
+    return _ref28.apply(this, arguments);
+  };
+}());
+
+// Delete File from Project
+app["delete"]('/api/projects/:id/files/:fileId', /*#__PURE__*/function () {
+  var _ref29 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee29(req, res) {
+    var _project$files, db, projectId, fileId, project, file, result, _t45;
+    return _regenerator().w(function (_context29) {
+      while (1) switch (_context29.p = _context29.n) {
+        case 0:
+          _context29.p = 0;
+          _context29.n = 1;
+          return getDb();
+        case 1:
+          db = _context29.v;
+          projectId = parseInt(req.params.id);
+          fileId = parseFloat(req.params.fileId);
+          console.log("Attempting to delete file ".concat(fileId, " from project ").concat(projectId));
+
+          // Find the project
+          _context29.n = 2;
+          return db.collection("projects").findOne({
+            id: projectId
+          });
+        case 2:
+          project = _context29.v;
+          if (project) {
+            _context29.n = 3;
+            break;
+          }
+          return _context29.a(2, res.status(404).json({
+            message: "Project not found"
+          }));
+        case 3:
+          // Find the file
+          file = (_project$files = project.files) === null || _project$files === void 0 ? void 0 : _project$files.find(function (f) {
+            return f.id == fileId;
+          });
+          if (file) {
+            _context29.n = 4;
+            break;
+          }
+          return _context29.a(2, res.status(404).json({
+            message: "File not found"
+          }));
+        case 4:
+          _context29.n = 5;
+          return db.collection("projects").updateOne({
+            id: projectId
+          }, {
+            $pull: {
+              files: {
+                id: fileId
+              }
+            },
+            $set: {
+              lastActivity: new Date().toISOString()
+            }
+          });
+        case 5:
+          result = _context29.v;
+          if (!(result.matchedCount === 0)) {
+            _context29.n = 6;
+            break;
+          }
+          return _context29.a(2, res.status(404).json({
+            message: "Failed to delete file"
+          }));
+        case 6:
+          res.json({
+            success: true,
+            message: "File deleted successfully"
+          });
+          _context29.n = 8;
+          break;
+        case 7:
+          _context29.p = 7;
+          _t45 = _context29.v;
+          console.error('Error deleting file:', _t45);
+          res.status(500).json({
+            message: "Server error"
+          });
+        case 8:
+          return _context29.a(2);
+      }
+    }, _callee29, null, [[0, 7]]);
+  }));
+  return function (_x59, _x60) {
+    return _ref29.apply(this, arguments);
+  };
+}());
+
+// CHECK-IN – any team member
+app.post('/api/projects/:id/checkin', upload.array('files'), /*#__PURE__*/function () {
+  var _ref30 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee30(req, res) {
+    var db, projectId, _req$body13, userId, text, parsedUserId, project, isOwner, isTeamMember, isCheckedOutByUser, checkoutResult, files, message, updateOps, result, updatedProject, _t46;
+    return _regenerator().w(function (_context30) {
+      while (1) switch (_context30.p = _context30.n) {
+        case 0:
+          _context30.p = 0;
+          _context30.n = 1;
+          return getDb();
+        case 1:
+          db = _context30.v;
+          projectId = parseInt(req.params.id);
+          _req$body13 = req.body, userId = _req$body13.userId, text = _req$body13.text;
+          parsedUserId = parseInt(userId);
+          if (!isNaN(parsedUserId)) {
+            _context30.n = 2;
+            break;
+          }
+          return _context30.a(2, res.status(400).json({
+            message: "Invalid userId"
+          }));
+        case 2:
+          _context30.n = 3;
+          return db.collection("projects").findOne({
+            id: projectId
+          });
+        case 3:
+          project = _context30.v;
+          if (project) {
+            _context30.n = 4;
+            break;
+          }
+          return _context30.a(2, res.status(404).json({
+            message: "Project not found"
+          }));
+        case 4:
+          // Must be checked out by this user OR be a team member
+          isOwner = project.creatorId === parsedUserId;
+          isTeamMember = Array.isArray(project.teamMembers) && project.teamMembers.includes(parsedUserId);
+          isCheckedOutByUser = project.lockedBy === parsedUserId;
+          if (!(!isCheckedOutByUser && !(isOwner || isTeamMember))) {
+            _context30.n = 5;
+            break;
+          }
+          return _context30.a(2, res.status(403).json({
+            message: "You must be the owner, a team member, or have checked out the project"
+          }));
+        case 5:
+          if (isCheckedOutByUser) {
+            _context30.n = 7;
+            break;
+          }
+          _context30.n = 6;
+          return db.collection("projects").updateOne({
+            id: projectId,
+            lockedBy: null
+          }, {
+            $set: {
+              lockedBy: parsedUserId
+            }
+          });
+        case 6:
+          checkoutResult = _context30.v;
+          if (!(checkoutResult.matchedCount === 0)) {
+            _context30.n = 7;
+            break;
+          }
+          return _context30.a(2, res.status(409).json({
+            message: "Project is already checked out by someone else"
+          }));
+        case 7:
+          // Process uploaded files
+          files = req.files ? req.files.map(function (file) {
+            return {
+              id: Date.now() + Math.random(),
+              name: file.originalname,
+              path: file.path,
+              url: "/uploads/".concat(file.filename),
+              created: new Date().toISOString()
+            };
+          }) : [];
+          message = {
+            id: Date.now(),
+            userId: parsedUserId,
+            text: text || 'Updated project files',
+            time: new Date().toISOString()
+          };
+          updateOps = {
+            $set: {
+              lastActivity: message.time,
+              lockedBy: null
+            },
+            $push: {
+              messages: message
+            }
+          };
+          if (files.length > 0) {
+            updateOps.$push.files = {
+              $each: files
+            };
+          }
+          _context30.n = 8;
+          return db.collection("projects").updateOne({
+            id: projectId
+          }, updateOps);
+        case 8:
+          result = _context30.v;
+          if (!(result.matchedCount === 0)) {
+            _context30.n = 9;
+            break;
+          }
+          return _context30.a(2, res.status(404).json({
+            message: "Project not found during update"
+          }));
+        case 9:
+          _context30.n = 10;
+          return db.collection("projects").findOne({
+            id: projectId
+          });
+        case 10:
+          updatedProject = _context30.v;
+          res.json(updatedProject);
+          _context30.n = 12;
+          break;
+        case 11:
+          _context30.p = 11;
+          _t46 = _context30.v;
+          console.error('Check-in error:', _t46);
+          res.status(500).json({
+            message: "Server error",
+            details: _t46.message
+          });
+        case 12:
+          return _context30.a(2);
+      }
+    }, _callee30, null, [[0, 11]]);
+  }));
+  return function (_x61, _x62) {
+    return _ref30.apply(this, arguments);
+  };
+}());
+
+// Add friend to project
+
+app.post('/api/projects/:id/team', /*#__PURE__*/function () {
+  var _ref31 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee31(req, res) {
+    var db, projectId, _req$body14, userId, memberId, action, parsedUserId, parsedMemberId, project, isOwner, isTeamMember, result, userExists, _t47;
+    return _regenerator().w(function (_context31) {
+      while (1) switch (_context31.p = _context31.n) {
+        case 0:
+          _context31.p = 0;
+          _context31.n = 1;
+          return getDb();
+        case 1:
+          db = _context31.v;
+          projectId = parseInt(req.params.id);
+          _req$body14 = req.body, userId = _req$body14.userId, memberId = _req$body14.memberId, action = _req$body14.action;
+          parsedUserId = parseInt(userId);
+          parsedMemberId = parseInt(memberId);
+          if (!(isNaN(parsedUserId) || isNaN(parsedMemberId))) {
+            _context31.n = 2;
+            break;
+          }
+          return _context31.a(2, res.status(400).json({
+            message: "Invalid IDs"
+          }));
+        case 2:
+          _context31.n = 3;
+          return db.collection("projects").findOne({
+            id: projectId
+          });
+        case 3:
+          project = _context31.v;
+          if (project) {
+            _context31.n = 4;
+            break;
+          }
+          return _context31.a(2, res.status(404).json({
+            message: "Project not found"
+          }));
+        case 4:
+          isOwner = project.creatorId === parsedUserId;
+          isTeamMember = Array.isArray(project.teamMembers) && project.teamMembers.includes(parsedUserId);
+          if (!(!isOwner && !isTeamMember)) {
+            _context31.n = 5;
+            break;
+          }
+          return _context31.a(2, res.status(403).json({
+            message: "Only owners and team members can modify the team"
+          }));
+        case 5:
+          if (Array.isArray(project.teamMembers)) {
+            _context31.n = 6;
+            break;
+          }
+          _context31.n = 6;
+          return db.collection("projects").updateOne({
+            id: projectId
+          }, {
+            $set: {
+              teamMembers: []
+            }
+          });
+        case 6:
+          if (!(action === 'add')) {
+            _context31.n = 10;
+            break;
+          }
+          _context31.n = 7;
+          return db.collection("users").findOne({
+            id: parsedMemberId
+          });
+        case 7:
+          userExists = _context31.v;
+          if (userExists) {
+            _context31.n = 8;
+            break;
+          }
+          return _context31.a(2, res.status(404).json({
+            message: "User to add not found"
+          }));
+        case 8:
+          _context31.n = 9;
+          return db.collection("projects").updateOne({
+            id: projectId
+          }, {
+            $addToSet: {
+              teamMembers: parsedMemberId
+            },
+            $set: {
+              lastActivity: new Date().toISOString()
+            }
+          });
+        case 9:
+          result = _context31.v;
+          _context31.n = 13;
+          break;
+        case 10:
+          if (!(action === 'remove')) {
+            _context31.n = 12;
+            break;
+          }
+          _context31.n = 11;
+          return db.collection("projects").updateOne({
+            id: projectId
+          }, {
+            $pull: {
+              teamMembers: parsedMemberId
+            },
+            $set: {
+              lastActivity: new Date().toISOString()
+            }
+          });
+        case 11:
+          result = _context31.v;
+          _context31.n = 13;
+          break;
+        case 12:
+          return _context31.a(2, res.status(400).json({
+            message: "Invalid action"
+          }));
+        case 13:
+          if (!(result.matchedCount === 0)) {
+            _context31.n = 14;
+            break;
+          }
+          return _context31.a(2, res.status(404).json({
+            message: "Project not found"
+          }));
+        case 14:
+          res.json({
+            success: true,
+            message: "Team member ".concat(action, "ed")
+          });
+          _context31.n = 16;
+          break;
+        case 15:
+          _context31.p = 15;
+          _t47 = _context31.v;
+          console.error('Team update error:', _t47);
+          res.status(500).json({
+            message: "Server error"
+          });
+        case 16:
+          return _context31.a(2);
+      }
+    }, _callee31, null, [[0, 15]]);
+  }));
+  return function (_x63, _x64) {
+    return _ref31.apply(this, arguments);
+  };
+}());
+app.post('/api/projects/:id/checkin', upload.array('files'), /*#__PURE__*/function () {
+  var _ref32 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee32(req, res) {
+    var db, projectId, _req$body15, userId, text, parsedUserId, project, isOwner, isTeamMember, isCheckedOutByUser, checkoutResult, files, message, updateOps, result, updatedProject, _t48;
+    return _regenerator().w(function (_context32) {
+      while (1) switch (_context32.p = _context32.n) {
+        case 0:
+          _context32.p = 0;
+          _context32.n = 1;
+          return getDb();
+        case 1:
+          db = _context32.v;
+          projectId = parseInt(req.params.id);
+          _req$body15 = req.body, userId = _req$body15.userId, text = _req$body15.text;
+          parsedUserId = parseInt(userId);
+          if (!isNaN(parsedUserId)) {
+            _context32.n = 2;
+            break;
+          }
+          return _context32.a(2, res.status(400).json({
+            message: "Invalid userId"
+          }));
+        case 2:
+          _context32.n = 3;
+          return db.collection("projects").findOne({
+            id: projectId
+          });
+        case 3:
+          project = _context32.v;
+          if (project) {
+            _context32.n = 4;
+            break;
+          }
+          return _context32.a(2, res.status(404).json({
+            message: "Project not found"
+          }));
+        case 4:
+          isOwner = project.creatorId === parsedUserId;
+          isTeamMember = Array.isArray(project.teamMembers) && project.teamMembers.includes(parsedUserId);
+          isCheckedOutByUser = project.lockedBy === parsedUserId;
+          if (!(!isOwner && !isTeamMember && !isCheckedOutByUser)) {
+            _context32.n = 5;
+            break;
+          }
+          return _context32.a(2, res.status(403).json({
+            message: "Not authorized to check in this project"
+          }));
+        case 5:
+          if (isCheckedOutByUser) {
+            _context32.n = 7;
+            break;
+          }
+          _context32.n = 6;
+          return db.collection("projects").updateOne({
+            id: projectId,
+            lockedBy: null
+          }, {
+            $set: {
+              lockedBy: parsedUserId
+            }
+          });
+        case 6:
+          checkoutResult = _context32.v;
+          if (!(checkoutResult.matchedCount === 0)) {
+            _context32.n = 7;
+            break;
+          }
+          return _context32.a(2, res.status(409).json({
+            message: "Project is checked out by someone else"
+          }));
+        case 7:
+          if (Array.isArray(project.files)) {
+            _context32.n = 8;
+            break;
+          }
+          _context32.n = 8;
+          return db.collection("projects").updateOne({
+            id: projectId
+          }, {
+            $set: {
+              files: []
+            }
+          });
+        case 8:
+          if (Array.isArray(project.messages)) {
+            _context32.n = 9;
+            break;
+          }
+          _context32.n = 9;
+          return db.collection("projects").updateOne({
+            id: projectId
+          }, {
+            $set: {
+              messages: []
+            }
+          });
+        case 9:
+          files = req.files ? req.files.map(function (file) {
+            return {
+              id: Date.now() + Math.random(),
+              name: file.originalname,
+              path: file.path,
+              url: "/uploads/".concat(file.filename),
+              created: new Date().toISOString()
+            };
+          }) : [];
+          message = {
+            id: Date.now(),
+            userId: parsedUserId,
+            text: text || 'Checked in project',
+            time: new Date().toISOString()
+          };
+          updateOps = {
+            $set: {
+              lastActivity: message.time,
+              lockedBy: null // UNLOCK
+            },
+            $push: {
+              messages: message
+            }
+          };
+          if (files.length > 0) {
+            updateOps.$push.files = {
+              $each: files
+            };
+          }
+          _context32.n = 10;
+          return db.collection("projects").updateOne({
+            id: projectId
+          }, updateOps);
+        case 10:
+          result = _context32.v;
+          if (!(result.matchedCount === 0)) {
+            _context32.n = 11;
+            break;
+          }
+          return _context32.a(2, res.status(404).json({
+            message: "Project not found during update"
+          }));
+        case 11:
+          _context32.n = 12;
+          return db.collection("projects").findOne({
+            id: projectId
+          });
+        case 12:
+          updatedProject = _context32.v;
+          res.json(updatedProject);
+          _context32.n = 14;
+          break;
+        case 13:
+          _context32.p = 13;
+          _t48 = _context32.v;
+          console.error('Check-in error:', _t48);
+          res.status(500).json({
+            message: "Server error",
+            details: _t48.message
+          });
+        case 14:
+          return _context32.a(2);
+      }
+    }, _callee32, null, [[0, 13]]);
+  }));
+  return function (_x65, _x66) {
+    return _ref32.apply(this, arguments);
+  };
+}());
+
 //DON'T TOUCH
 app.get('/{*any}', function (req, res) {
   return res.sendFile(path.resolve('frontend/public', 'index.html'));
 });
 app.listen(port, function () {
   console.log("Server running at http://localhost:".concat(port));
-  console.log("Key API endpoints:");
-  console.log("- POST /api/auth/login");
-  console.log("- POST /api/auth/signup");
-  console.log("- GET /api/users");
-  console.log("- GET /api/projects");
-  console.log("- POST /api/projects");
-  console.log("- POST /api/projects/:id/checkin");
-  console.log("- POST /api/friends");
-  console.log("- GET /api/activity/local/:userId");
-  console.log("- GET /api/activity/global");
-  console.log("- GET /api/search?type=user&query=...");
 });

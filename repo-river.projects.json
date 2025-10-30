@@ -1,0 +1,408 @@
+[{
+  "_id": {
+    "$oid": "68de451b656245cab899251c"
+  },
+  "id": 1,
+  "name": "CloudSync App",
+  "description": "A lightweight application designed for synchronous files across multiple devices with real-time analytics, built using React and Node.js. Features include various encryption and a user-friendly interface.",
+  "hashtag": "#AttractorsMinorECloud",
+  "lastActivity": "User checked in CloudSync App at 2025/06/07 10:00 AMST",
+  "image": "/assets/images/projects/cloudsync.png",
+  "creatorId": 1,
+  "createdAt": "2025/06/01",
+  "downloads": 100,
+  "isPublic": true,
+  "files": [
+    {
+      "id": 1,
+      "name": "main.js",
+      "created": "01/08/2025 10:00"
+    },
+    {
+      "id": 2,
+      "name": "styles.css",
+      "created": "01/08/2025 10:00"
+    },
+    {
+      "id": 3,
+      "name": "index.html",
+      "created": "01/08/2025 10:00"
+    }
+  ],
+  "messages": [
+    {
+      "id": 1,
+      "userId": 1,
+      "text": "Initial commit",
+      "time": "2025/06/01 09:30"
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "text": "Fixed styling issues",
+      "time": "2025/06/02 14:22"
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "text": "Added authentication",
+      "time": "2025/06/03 11:45"
+    }
+  ],
+  "teamMembers": [
+    4
+  ]
+},
+{
+  "_id": {
+    "$oid": "68de451b656245cab899251d"
+  },
+  "id": 2,
+  "name": "HealthTrack",
+  "description": "A mobile app to monitor daily fitness and health routines, supporting integrations with wearable devices. Built with Flutter and Firebase.",
+  "hashtag": "#WellnessApp2025",
+  "lastActivity": "User logged activity on HealthTrack at 2025/06/10 09:45 AMST",
+  "image": "/assets/images/projects/healthtrack.png",
+  "creatorId": 2,
+  "createdAt": "2025/05/28",
+  "downloads": 220,
+  "isPublic": true,
+  "files": [
+    {
+      "id": 1,
+      "name": "app.dart",
+      "created": "28/05/2025 09:00"
+    },
+    {
+      "id": 2,
+      "name": "firebase.json",
+      "created": "28/05/2025 09:00"
+    }
+  ],
+  "messages": [
+    {
+      "id": 1,
+      "userId": 2,
+      "text": "Initial Firebase setup",
+      "time": "2025/05/28 09:15"
+    },
+    {
+      "id": 2,
+      "userId": 3,
+      "text": "Added step counter feature",
+      "time": "2025/05/29 10:30"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "68de451b656245cab899251e"
+  },
+  "id": 3,
+  "name": "EduPortal",
+  "description": "An online learning platform that connects tutors and students, featuring live video, assignments, and grading tools. Built with Django and WebRTC.",
+  "hashtag": "#LearnOnline",
+  "lastActivity": "New tutor registered on EduPortal at 2025/06/12 14:20 PMST",
+  "image": "/assets/images/projects/eduportal.png",
+  "creatorId": 3,
+  "createdAt": "2025/05/25",
+  "downloads": 340,
+  "isPublic": true,
+  "files": [
+    {
+      "id": 1,
+      "name": "server.py",
+      "created": "25/05/2025 08:30"
+    },
+    {
+      "id": 2,
+      "name": "requirements.txt",
+      "created": "25/05/2025 08:30"
+    }
+  ],
+  "messages": [
+    {
+      "id": 1,
+      "userId": 3,
+      "text": "Initial backend setup",
+      "time": "2025/05/25 09:00"
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "text": "Integrated WebRTC",
+      "time": "2025/05/26 13:45"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "68de451b656245cab899251f"
+  },
+  "id": 4,
+  "name": "CampusConnect",
+  "description": "A platform for students to share resources, join groups, and collaborate on campus projects. Built using MERN stack.",
+  "hashtag": "#UPCommunity",
+  "lastActivity": "User posted new resource in CampusConnect at 2025/06/15 18:10 PMST",
+  "image": "/assets/images/projects/campusconnect.png",
+  "creatorId": 4,
+  "createdAt": "2025/06/05",
+  "downloads": 80,
+  "isPublic": true,
+  "files": [
+    {
+      "id": 1,
+      "name": "server.js",
+      "created": "05/06/2025 11:00"
+    },
+    {
+      "id": 2,
+      "name": "client.js",
+      "created": "05/06/2025 11:00"
+    }
+  ],
+  "messages": [
+    {
+      "id": 1,
+      "userId": 4,
+      "text": "Started MERN setup",
+      "time": "2025/06/05 11:30"
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "text": "Added resource sharing feature",
+      "time": "2025/06/06 15:20"
+    }
+  ],
+  "teamMembers": [
+    2,
+    1
+  ]
+},
+{
+  "_id": {
+    "$oid": "68de451b656245cab8992520"
+  },
+  "id": 5,
+  "name": "ShopEase",
+  "description": "An e-commerce web app with AI-powered recommendations and seamless payment integration. Built with Next.js and Stripe.",
+  "hashtag": "#SmartShopping",
+  "lastActivity": "User completed checkout on ShopEase at 2025/06/18 12:00 PMST",
+  "image": "/assets/images/projects/shopease.png",
+  "creatorId": 5,
+  "createdAt": "2025/06/02",
+  "downloads": 500,
+  "isPublic": true,
+  "files": [
+    {
+      "id": 1,
+      "name": "checkout.js",
+      "created": "02/06/2025 10:00"
+    },
+    {
+      "id": 2,
+      "name": "products.json",
+      "created": "02/06/2025 10:00"
+    }
+  ],
+  "messages": [
+    {
+      "id": 1,
+      "userId": 5,
+      "text": "Implemented Stripe payments",
+      "time": "2025/06/02 10:15"
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "text": "Improved recommendation engine",
+      "time": "2025/06/03 12:45"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "68de451b656245cab8992521"
+  },
+  "id": 6,
+  "name": "AutoML Dashboard",
+  "description": "A web dashboard to manage machine learning pipelines, visualize results, and deploy models with ease. Built with Python Flask and React.",
+  "hashtag": "#AIForEveryone",
+  "lastActivity": "User deployed new model in AutoML Dashboard at 2025/06/20 16:00 PMST",
+  "image": "/assets/images/projects/automl.png",
+  "creatorId": 6,
+  "createdAt": "2025/05/30",
+  "downloads": 150,
+  "isPublic": false,
+  "files": [
+    {
+      "id": 1,
+      "name": "pipeline.py",
+      "created": "30/05/2025 09:00"
+    },
+    {
+      "id": 2,
+      "name": "dashboard.jsx",
+      "created": "30/05/2025 09:00"
+    }
+  ],
+  "messages": [
+    {
+      "id": 1,
+      "userId": 6,
+      "text": "Initial ML pipeline setup",
+      "time": "2025/05/30 09:15"
+    },
+    {
+      "id": 2,
+      "userId": 3,
+      "text": "Added visualization module",
+      "time": "2025/05/31 11:20"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "68dede285ceb08405d379138"
+  },
+  "id": 7,
+  "name": "Testing Creation",
+  "description": "This is a test project that I will probably delete/edit however it was created using the create new project form at the bottom of the profile page. It is also private .",
+  "hashtag": "#Dev",
+  "isPublic": true,
+  "creatorId": 1,
+  "createdAt": "2025-10-02T20:18:48.082Z",
+  "downloads": 0,
+  "lastActivity": "2025-10-30T19:52:47.468Z",
+  "files": [],
+  "image": "/uploads/1759438533074-LOGO.png",
+  "messages": [],
+  "lockedBy": 1,
+  "teamMembers": [
+    3
+  ]
+},
+{
+  "_id": {
+    "$oid": "69035555e034fb8c9ed22b5c"
+  },
+  "id": 8,
+  "name": "Rubric Test",
+  "description": "Making new project to see if time is automatically added to a new project that is created as well as checking that all project details are valid and visible.",
+  "hashtag": "#Dev",
+  "isPublic": true,
+  "creatorId": 4,
+  "createdAt": "2025-10-30T12:08:53.224Z",
+  "downloads": 0,
+  "lastActivity": "2025-10-30T19:50:49.231Z",
+  "files": [],
+  "image": "/uploads/1761826278728-AdobeStock_1332996713.svg",
+  "messages": [],
+  "lockedBy": 1
+},
+{
+  "_id": {
+    "$oid": "6903a97cdeea9def1788a630"
+  },
+  "id": 9,
+  "name": "Testing Creation",
+  "description": "Images test",
+  "hashtag": "#Dev",
+  "isPublic": true,
+  "creatorId": 4,
+  "createdAt": "2025-10-30T18:07:56.397Z",
+  "downloads": 0,
+  "lastActivity": "2025-10-30T18:07:56.397Z",
+  "files": [
+    {
+      "id": 1761847676353.378,
+      "name": "illustration1.png",
+      "path": "backend\\uploadedFiles\\file.originalname",
+      "created": "2025-10-30T18:07:56.353Z"
+    }
+  ],
+  "image": "/uploads/file.originalname",
+  "messages": [],
+  "lockedBy": null
+},
+{
+  "_id": {
+    "$oid": "6903af7fdb10cfdad4b7d7f1"
+  },
+  "id": 10,
+  "name": "Test 2",
+  "description": "Testing file uploads",
+  "hashtag": "#Dev",
+  "isPublic": true,
+  "creatorId": 4,
+  "createdAt": "2025-10-30T18:33:35.827Z",
+  "downloads": 0,
+  "lastActivity": "2025-10-30T18:33:35.827Z",
+  "files": [
+    {
+      "id": 1761849215801.6626,
+      "name": "Functional and Non-Functional Requirements.pdf",
+      "path": "backend\\uploadedFiles\\1761849215779-Functional and Non-Functional Requirements.pdf",
+      "url": "/uploads/1761849215779-Functional and Non-Functional Requirements.pdf",
+      "created": "2025-10-30T18:33:35.801Z"
+    }
+  ],
+  "image": "/uploads/1761849215780-PlantState.jpg",
+  "messages": [],
+  "lockedBy": null
+},
+{
+  "_id": {
+    "$oid": "6903cd85ca447f857030f83a"
+  },
+  "id": 11,
+  "name": "CodeFlow",
+  "description": "A lightweight, real-time code collaboration tool built for remote teams. Features live pair programming, version snapshots, and seamless Git integration.",
+  "hashtag": "#RemoteDev",
+  "isPublic": true,
+  "creatorId": 8,
+  "createdAt": "2025-10-30T20:41:41.582Z",
+  "downloads": 0,
+  "lastActivity": "2025-10-30T20:41:41.582Z",
+  "files": [],
+  "image": null,
+  "messages": [],
+  "lockedBy": null
+},
+{
+  "_id": {
+    "$oid": "6903cdb0ca447f857030f83b"
+  },
+  "id": 12,
+  "name": "PixelForge",
+  "description": "An open-source pixel art editor with layer support, animation timelines, and export to GIF/PNG. Perfect for indie game devs and retro artists.",
+  "hashtag": "#GameDev",
+  "isPublic": false,
+  "creatorId": 8,
+  "createdAt": "2025-10-30T20:42:24.676Z",
+  "downloads": 0,
+  "lastActivity": "2025-10-30T20:42:24.676Z",
+  "files": [],
+  "image": null,
+  "messages": [],
+  "lockedBy": null
+},
+{
+  "_id": {
+    "$oid": "6903cdcaca447f857030f83c"
+  },
+  "id": 13,
+  "name": "TaskRiver",
+  "description": "A minimalist task manager with a flowing Kanban board, time tracking, and team activity feed. Designed for developers who hate bloated tools.",
+  "hashtag": "#Code",
+  "isPublic": true,
+  "creatorId": 8,
+  "createdAt": "2025-10-30T20:42:50.333Z",
+  "downloads": 0,
+  "lastActivity": "2025-10-30T20:42:50.333Z",
+  "files": [],
+  "image": null,
+  "messages": [],
+  "lockedBy": null
+}]

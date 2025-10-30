@@ -1,0 +1,186 @@
+[{
+  "_id": {
+    "$oid": "68de451b656245cab8992516"
+  },
+  "id": 1,
+  "name": "John Developer",
+  "email": "john@example.com",
+  "avatar": "https://api.dicebear.com/9.x/adventurer/svg?seed=Jocelyn",
+  "bio": "Full-stack developer with 5 years of experience",
+  "birthday": "1990-05-15",
+  "gender": "Male",
+  "work": "Software Engineer at TechCorp",
+  "phone": "+27 11 555 0123",
+  "projectsCount": 14,
+  "followers": 245,
+  "following": 87,
+  "password": "password123",
+  "friends": []
+},
+{
+  "_id": {
+    "$oid": "68de451b656245cab8992517"
+  },
+  "id": 2,
+  "name": "Sarah Coder",
+  "email": "sarah@example.com",
+  "avatar": "https://api.dicebear.com/9.x/adventurer/svg?seed=Sawyer",
+  "bio": "Frontend specialist and UI enthusiast",
+  "birthday": "1992-11-22",
+  "gender": "Female",
+  "work": "UI/UX Designer at DesignHub",
+  "phone": "+27 21 555 0124",
+  "projectsCount": 8,
+  "followers": 178,
+  "following": 94,
+  "password": "password123",
+  "friends": []
+},
+{
+  "_id": {
+    "$oid": "68de451b656245cab8992518"
+  },
+  "id": 3,
+  "name": "Mike Programmer",
+  "email": "mike@example.com",
+  "avatar": "https://api.dicebear.com/9.x/adventurer/svg?seed=Luis",
+  "bio": "Backend developer and database expert",
+  "birthday": "1988-03-08",
+  "gender": "Male",
+  "work": "Lead Developer at DataSystems",
+  "phone": "+27 12 555 0125",
+  "projectsCount": 15,
+  "followers": 312,
+  "following": 102,
+  "password": "password123",
+  "friends": []
+},
+{
+  "_id": {
+    "$oid": "68de451b656245cab8992519"
+  },
+  "id": 4,
+  "name": "Thabo",
+  "email": "u24928209@tuks.co.za",
+  "avatar": "/uploads/1761849009967-me.jpg",
+  "bio": "Software engineering student and aspiring developer",
+  "birthday": "2000-08-20",
+  "gender": "Male",
+  "work": "Student at University of Pretoria",
+  "phone": "+27 12 345 6789",
+  "projectsCount": 3,
+  "followers": 45,
+  "following": 32,
+  "password": "qwerty123",
+  "friends": []
+},
+{
+  "_id": {
+    "$oid": "68de451b656245cab899251a"
+  },
+  "id": 5,
+  "name": "Alex Tech",
+  "email": "alex@example.com",
+  "avatar": "https://api.dicebear.com/9.x/adventurer/svg?seed=Kingston",
+  "bio": "Mobile developer and open source contributor",
+  "birthday": "1990-01-01",
+  "gender": "Male",
+  "work": "Mobile Developer at AppCo",
+  "phone": "+27 31 555 0126",
+  "projectsCount": 9,
+  "followers": 127,
+  "following": 50,
+  "password": "password123",
+  "friends": []
+},
+{
+  "_id": {
+    "$oid": "68de451b656245cab899251b"
+  },
+  "id": 6,
+  "name": "Taylor Code",
+  "email": "taylor@example.com",
+  "avatar": "https://api.dicebear.com/9.x/adventurer/svg?seed=Sophia",
+  "bio": "DevOps engineer and cloud architect",
+  "birthday": "1995-01-01",
+  "gender": "Non-binary",
+  "work": "DevOps at CloudInc",
+  "phone": "+27 16 555 0127",
+  "projectsCount": 6,
+  "followers": 89,
+  "following": 60,
+  "password": "password123",
+  "friends": []
+},
+{
+  "_id": {
+    "$oid": "69032b9f4f642c0825eb2892"
+  },
+  "id": 7,
+  "name": "Test1",
+  "email": "test1@gmail.com",
+  "password": "test123",
+  "avatar": "https://api.dicebear.com/9.x/adventurer/svg?seed=Test1",
+  "bio": "New user",
+  "birthday": "2001-12-19",
+  "gender": "Other",
+  "work": "Software Engineer at TechCorp",
+  "phone": "+27 11 555 0123",
+  "projectsCount": 0,
+  "followers": 0,
+  "following": 0
+},
+{
+  "_id": {
+    "$oid": "69032b9f4f642c0825eb2893"
+  },
+  "id": 8,
+  "name": "Njabs",
+  "email": "Njabs@gmail.com",
+  "password": "Njabs123",
+  "avatar": "https://api.dicebear.com/9.x/adventurer/svg?seed=Test2",
+  "bio": "Passionate about open-source development",
+  "birthday": "1999-05-12",
+  "gender": "Male",
+  "work": "Frontend Developer at CodeWave",
+  "phone": "+27 82 555 0145",
+  "projectsCount": 21,
+  "followers": 2000,
+  "following": 10
+},
+{
+  "_id": {
+    "$oid": "69032b9f4f642c0825eb2894"
+  },
+  "id": 9,
+  "name": "Jane",
+  "email": "Jane@gmail.com",
+  "password": "Jane123",
+  "avatar": "https://api.dicebear.com/9.x/adventurer/svg?seed=Test3",
+  "bio": "Loves machine learning and data visualization",
+  "birthday": "2000-08-23",
+  "gender": "Female",
+  "work": "Data Scientist at InsightAI",
+  "phone": "+27 83 555 0176",
+  "projectsCount": 0,
+  "followers": 0,
+  "following": 0
+},
+{
+  "_id": {
+    "$oid": "6903b1dddb10cfdad4b7d7f2"
+  },
+  "id": 10,
+  "name": "Owen",
+  "email": "Owen@gmail.com",
+  "password": "Owen123",
+  "avatar": "https://api.dicebear.com/9.x/adventurer/svg?seed=Owen",
+  "bio": "New user",
+  "birthday": null,
+  "gender": null,
+  "work": "",
+  "phone": "",
+  "projectsCount": 0,
+  "followers": 0,
+  "following": 0
+}]

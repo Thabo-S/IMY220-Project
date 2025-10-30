@@ -82,7 +82,7 @@ const Profile = () => {
         const friendsResponse = await fetch(`/api/friends/${userData.id}`);
         if (!friendsResponse.ok) throw new Error('Failed to fetch friends');
         const friendData = await friendsResponse.json();
-        console.log('Friend data:', friendData); // Debug
+        console.log('Friend data:', friendData);
 
         // Fetch friend details using IDs
         if (friendData.friends && friendData.friends.length > 0) {

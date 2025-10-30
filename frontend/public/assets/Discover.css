@@ -101,3 +101,16 @@
 .no-projects p {
     margin-bottom: 10px;
 }
+
+.discover-avatar {
+    width: 150px;
+    height: 150px;
+    min-width: 150px;
+    min-height: 150px;
+    max-width: 150px;
+    max-height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #3396D3;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
